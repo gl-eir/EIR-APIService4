@@ -232,25 +232,7 @@ public class LoginService {
                             if (stateInterup.getInterp() != null) {
                                 status = stateInterup.getInterp();
                             }
-                            log.info("going for userRoles  " + userRoles.toString());
-                            log.info("going for UserData  " + UserData.toString());
 
-                            log.info("going for UserData1  " + UserData.getUserProfile().getFirstName());
-                    
-                                log.info("going for UserData2  " + periodInterp);
-
-                            log.info("going for UserData3  " + UserData.getUserProfile().getOperatorTypeName());
-
-                            log.info("going for UserData5  " + UserData.getCurrentStatus());
-                            
-                            log.info("going for UserData6  " + UserData.getUsertype().getSelfRegister());
-
-                            log.info("going for UserData7  " + UserData.getUsertype().getDefaultLink());
-                            log.info("going for Type Name  " + UserData.getUsertype().getUsertypeName());
-                            
-                           
-                            
-                            
                             //Security token code
 //    						authenticationManager.authenticate(
 //    								new UsernamePasswordAuthenticationToken(UserData.getUsername(), UserData.getPassword())
@@ -269,7 +251,7 @@ public class LoginService {
                                     periodInterp, UserData.getCurrentStatus(), UserData.getUsertype().getSelfRegister(),
                                     UserData.getUsertype().getDefaultLink());
 //                            response.setToken(jwtToken);
-                            log.info("login response:  " + response);
+                            //log.info("login response:  " + response);
                             return new ResponseEntity<>(response, HttpStatus.OK);
                         }
                     } else if (UserData.getCurrentStatus() == status_delete) {
@@ -299,7 +281,7 @@ public class LoginService {
         try {
 
             log.info("inside login controller");
-            log.info("user data for login:  " + userLogin);
+            //log.info("user data for login:  " + userLogin);
 
             User user = new User();
             user.setUsername(userLogin.getUsername());
